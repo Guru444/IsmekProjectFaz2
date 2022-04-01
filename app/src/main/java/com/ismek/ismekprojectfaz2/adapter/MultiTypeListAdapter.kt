@@ -13,6 +13,7 @@ class MultiTypeListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var multiTypeList: ArrayList<Boolean> = arrayListOf()
     private var BUTTON = 0
     private var TEXTVIEW = 1
+    private var buttonClickListener : (String) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder{
         return when(viewType){
@@ -41,7 +42,7 @@ class MultiTypeListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(btn: Boolean) {
             itemView.btn_deneme.text = "Merhaba"
             itemView.btn_deneme.setOnClickListener {
-                
+
             }
         }
     }
